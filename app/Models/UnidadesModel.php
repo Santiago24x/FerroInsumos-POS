@@ -11,7 +11,7 @@ class UnidadesModel extends Model
     protected $primaryKey = 'id';
 
     protected $returnType = 'array';
-    protected $useSoftDeletes = true;
+    protected $useSoftDeletes = false;
 
     protected $allowedFields = [
         'nombre', 'nombre_corto', 'activo'];
