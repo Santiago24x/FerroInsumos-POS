@@ -3,17 +3,19 @@
         <div class="container-fluid px-4">
             <h4 class="mt-4"><?php echo $titulo ?></h4>
 
-            <form action="<?php echo base_url(); ?>/unidades/insertar" method="POST" autocomplete="off">
+            <form action="<?php echo base_url(); ?>unidades/actualizar" method="POST" autocomplete="off">
+
+                <input type="hidden" id="id" name="id" value="<?php echo $datos['id']; ?>" />
 
                 <div class="form-group">
                     <div class="row">
                         <div class="col-12 col-sm-6">
                             <label>Nombre</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre" autofocus required />
+                            <input type="text" class="form-control" id="nombre" name="nombre" value="<?php echo $datos['nombre']; ?>" autofocus required />
                         </div>
                         <div class="col-12 col-sm-6">
                             <label>Abreviatura</label>
-                            <input type="text" class="form-control" id="nombre_corto" name="nombre_corto" required />
+                            <input type="text" class="form-control" id="nombre_corto" name="nombre_corto" value="<?php echo $datos['nombre_corto']; ?>" required />
                         </div>
                     </div>
                 </div>
