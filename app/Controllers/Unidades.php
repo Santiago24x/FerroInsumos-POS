@@ -23,8 +23,30 @@ class Unidades extends BaseController
       ];
 
       echo view('header');
-      echo view('tables', $data);
+      echo view('unidades/unidades', $data);
       echo view('footer');
    }
+
+   public function nuevo()
+   {
+      $data = [
+         'titulo' => 'Agregar Unidad'
+      ];
+      echo view('header');
+      echo view('unidades/nuevo', $data);
+      echo view('footer');
+   }
+
+
+   public function insertar()
+   {
+      $this->unidades->save([ 
+         'nombre' => $this->request->getVar('nombre'),
+         'nombre_corto' => $this->request->getVar('nombre_corto'),
+         'activo' => 1
+      ]);
+      return redirect()->to(base_url() . '/unidades');
+   }
+
 
 }

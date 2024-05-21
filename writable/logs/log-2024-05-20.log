@@ -362,3 +362,93 @@ AND `unidades`.`deleted_at` IS NULL', [...], false)
 11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
 12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-20 23:12:06 --> ParseError: syntax error, unexpected end of file
+[Method: GET, Route: unidades]
+in APPPATH\Views\unidades\unidades.php on line 47.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('unidades/unidades', [], true)
+ 3 APPPATH\Controllers\Unidades.php(26): view('unidades/unidades', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Unidades->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-20 23:16:20 --> ErrorException: Undefined array key "abreviatura"
+[Method: GET, Route: unidades]
+in APPPATH\Views\unidades\unidades.php on line 27.
+ 1 APPPATH\Views\unidades\unidades.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "abreviatura"', 'C:\\xampp\\htdocs\\pos\\app\\Views\\unidades\\unidades.php', 27)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\pos\\app\\Views\\unidades\\unidades.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('unidades/unidades', [], true)
+ 5 APPPATH\Controllers\Unidades.php(26): view('unidades/unidades', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Unidades->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-20 23:16:23 --> ErrorException: Undefined array key "abreviatura"
+[Method: GET, Route: unidades]
+in APPPATH\Views\unidades\unidades.php on line 27.
+ 1 APPPATH\Views\unidades\unidades.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "abreviatura"', 'C:\\xampp\\htdocs\\pos\\app\\Views\\unidades\\unidades.php', 27)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\pos\\app\\Views\\unidades\\unidades.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('unidades/unidades', [], true)
+ 5 APPPATH\Controllers\Unidades.php(26): view('unidades/unidades', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Unidades->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-20 23:18:07 --> ParseError: syntax error, unexpected end of file
+[Method: GET, Route: unidades]
+in APPPATH\Views\unidades\unidades.php on line 42.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('unidades/unidades', [], true)
+ 3 APPPATH\Controllers\Unidades.php(26): view('unidades/unidades', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Unidades->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-20 23:18:16 --> ParseError: syntax error, unexpected end of file
+[Method: GET, Route: unidades]
+in APPPATH\Views\unidades\unidades.php on line 42.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('unidades/unidades', [], true)
+ 3 APPPATH\Controllers\Unidades.php(26): view('unidades/unidades', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Unidades->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-20 23:18:17 --> ParseError: syntax error, unexpected end of file
+[Method: GET, Route: unidades]
+in APPPATH\Views\unidades\unidades.php on line 42.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('unidades/unidades', [], true)
+ 3 APPPATH\Controllers\Unidades.php(26): view('unidades/unidades', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Unidades->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-20 23:19:35 --> ErrorException: Undefined array key "abreviatura"
+[Method: GET, Route: unidades]
+in APPPATH\Views\unidades\unidades.php on line 33.
+ 1 APPPATH\Views\unidades\unidades.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "abreviatura"', 'C:\\xampp\\htdocs\\pos\\app\\Views\\unidades\\unidades.php', 33)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\pos\\app\\Views\\unidades\\unidades.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('unidades/unidades', [], true)
+ 5 APPPATH\Controllers\Unidades.php(26): view('unidades/unidades', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Unidades->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

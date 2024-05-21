@@ -8,9 +8,9 @@
         <meta name="author" content="" />
         <link rel="icon" href="assets/icons8-herramientas-70.png" />
         <title>FERROINSUMOS</title>
-        <link href="css/style.min.css" rel="stylesheet" />
-        <link href="css/styles.css" rel="stylesheet" />
-        <script src="js/all.js"></script>
+        <link href="<?php echo base_url() ?>css/style.min.css" rel="stylesheet" />
+        <link href="<?php echo base_url() ?>css/styles.css" rel="stylesheet" />
+        <script src="<?php echo base_url() ?>js/all.js"></script>
     </head>
     
     <body class="sb-nav-fixed">
@@ -54,7 +54,7 @@
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="layout-static.html">Productos</a>
-                                    <a class="nav-link" href="<?php echo base_url() ?>/unidades">Unidades</a>
+                                    <a class="nav-link" href="<?php echo base_url() ?>unidades">Unidades</a>
                                     <a class="nav-link" href="layout-sidenav-light.html">Categorias</a>
                                 </nav>
                             </div>
