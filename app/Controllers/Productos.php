@@ -3,50 +3,57 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\ProductosModel;
 use App\Models\UnidadesModel;
+use App\Models\CategoriasModel;
 
-class Unidades extends BaseController
+class Productos extends BaseController
 {
-   protected $unidades;
+   protected $productos;
 
    public function __construct()
    {
+      $this->productos = new ProductosModel();
       $this->unidades = new UnidadesModel();
+      $this->categorias = new CategoriasModel();
    }
 
    public function index($activo = 1)
    {
 
-      $unidades = $this->unidades->where('activo', $activo)->findAll();
+      $productos = $this->productos->where('activo', $activo)->findAll();
       $data = [
-         'titulo' => 'Unidades', 'datos' => $unidades   
+         'titulo' => 'Productos', 'datos' => $productos   
       ];
 
       echo view('header');
-      echo view('unidades/unidades', $data);
+      echo view('productos/productos', $data);
       echo view('footer');
    }
 
    public function eliminados($activo = 0)
    {
 
-      $unidades = $this->unidades->where('activo', $activo)->findAll();
+      $productos = $this->productos->where('activo', $activo)->findAll();
       $data = [
-         'titulo' => 'Unidades Eliminadas', 'datos' => $unidades   
+         'titulo' => 'Productos Eliminadas', 'datos' => $productos   
       ];
 
       echo view('header');
-      echo view('unidades/eliminados', $data);
+      echo view('productos/eliminados', $data);
       echo view('footer');
    }
 
    public function nuevo()
    {
+      $unidades = $this->unidades->where('activo', 1)->findAll();
+      $categorias = $this->categorias->where('activo', 1)->findAll();
+    
       $data = [
-         'titulo' => 'Agregar Unidad'
+         'titulo' => 'Agregar Producto' , 'unidades' => $unidades, 'categorias' => $categorias
       ];
       echo view('header');
-      echo view('unidades/nuevo', $data);
+      echo view('productos/nuevo', $data);
       echo view('footer');
    }
 
@@ -56,18 +63,18 @@ class Unidades extends BaseController
    {
 
       if ($this->request->getMethod() == "POST" && $this->validate([ 'nombre' => 'required', 'nombre_corto' => 'required'])) {
-      $this->unidades->save([ 
+      $this->productos->save([ 
          'nombre' => $this->request->getPost('nombre'), 
          'nombre_corto' => $this->request->getPost('nombre_corto')
       ]);
-      return redirect()->to(base_url() . 'unidades');
+      return redirect()->to(base_url() . 'productos');
 
    }else{
       $data = [
-         'titulo' => 'Agregar Unidad', 'validation' => $this->validator
+         'titulo' => 'Agregar Producto', 'validation' => $this->validator
       ];
       echo view('header');
-      echo view('unidades/nuevo', $data);
+      echo view('productos/nuevo', $data);
       echo view('footer');
    }
       
@@ -76,38 +83,38 @@ class Unidades extends BaseController
 
    public function editar($id)
    {
-      $unidad = $this->unidades->where('id', $id)->first();
+      $unidad = $this->productos->where('id', $id)->first();
       $data = [
-         'titulo' => 'Editar Unidad', 'datos' => $unidad
+         'titulo' => 'Editar Producto', 'datos' => $unidad
       ];
       echo view('header');
-      echo view('unidades/editar', $data);
+      echo view('productos/editar', $data);
       echo view('footer');
    }
 
 
    public function actualizar()
    {
-      $this->unidades->update($this->request->getPost('id'), [
+      $this->productos->update($this->request->getPost('id'), [
          'nombre' => $this->request->getPost('nombre'), 
          'nombre_corto' => $this->request->getPost('nombre_corto')
       ]);
-      return redirect()->to(base_url() . 'unidades');
+      return redirect()->to(base_url() . 'productos');
    }
 
 
 
    public function eliminar($id)
    {
-      $this->unidades->update($id, ['activo' => 0]);
-      return redirect()->to(base_url() . 'unidades');
+      $this->productos->update($id, ['activo' => 0]);
+      return redirect()->to(base_url() . 'productos');
    }  
 
 
    public function reingresar($id)
    {
-      $this->unidades->update($id, ['activo' => 1]);
-      return redirect()->to(base_url() . 'unidades');
+      $this->productos->update($id, ['activo' => 1]);
+      return redirect()->to(base_url() . 'productos');
    }
    
 

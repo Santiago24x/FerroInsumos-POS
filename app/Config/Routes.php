@@ -29,3 +29,7 @@ $routes->get('categorias/reingresar/(:num)', 'Categorias::reingresar/$1');
 //$routes->get('categorias/actualizar/(:num)', 'Categorias::actualizar/$1');
 $routes->post('categorias/actualizar', 'Categorias::actualizar');
 
+
+// PRODUCTOS
+$routes->get('productos', 'Productos::index');
+$routes->get('productos/nuevo', 'Productos::nuevo');

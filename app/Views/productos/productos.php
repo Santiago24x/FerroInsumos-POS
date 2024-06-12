@@ -6,8 +6,8 @@
                        
                         <div>
                             <p>
-                                <a href="<?php echo base_url(); ?>unidades/nuevo" class="btn btn-primary btn-sm">Agregar</a>
-                                <a href="<?php echo base_url(); ?>unidades/eliminados" class="btn btn-warning btn-sm">Eliminados</a>
+                                <a href="<?php echo base_url(); ?>productos/nuevo" class="btn btn-primary btn-sm">Agregar</a>
+                                <a href="<?php echo base_url(); ?>productos/eliminados" class="btn btn-warning btn-sm">Eliminados</a>
                             </p>
 
                         </div>
@@ -17,8 +17,10 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
+                                            <th>Codigo</th>
                                             <th>Nombre</th>
-                                            <th>Abreviatura</th>
+                                            <th>Precio</th>
+                                            <th>Existencias</th>
                                             <th></th>
                                             <th></th>
                                        
@@ -29,12 +31,15 @@
                                         <?php foreach ($datos as $dato) : ?>
                                             <tr>
                                                 <td><?php echo $dato['id'] ?></td>
+                                                <td><?php echo $dato['codigo'] ?></td>
                                                 <td><?php echo $dato['nombre'] ?></td>
-                                                <td><?php echo $dato['nombre_corto'] ?></td>
+                                                <td><?php echo $dato['precio_venta'] ?></td>
+                                                <td><?php echo $dato['existencias'] ?></td>
+                                                
 
-                                                <td><a href="<?php echo base_url(); ?>unidades/editar/<?php echo $dato['id'] ?>" class="btn btn-warning btn-sm"><i class="fa-solid fa-pencil"></i></a></td>
+                                                <td><a href="<?php echo base_url(); ?>productos/editar/<?php echo $dato['id'] ?>" class="btn btn-warning btn-sm"><i class="fa-solid fa-pencil"></i></a></td>
 
-                                                <td><a href="#" data-href="<?php echo base_url(); ?>unidades/eliminar/<?php echo $dato['id'] ?>" data-bs-toggle="modal" data-bs-target="#modal-confirma" data-placement="top" title="Eliminar Registro" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash-can"></i></a></td>
+                                                <td><a href="#" data-href="<?php echo base_url(); ?>productos/eliminar/<?php echo $dato['id'] ?>" data-bs-toggle="modal" data-bs-target="#modal-confirma" data-placement="top" title="Eliminar Registro" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash-can"></i></a></td>
 
                                             </tr>
 
