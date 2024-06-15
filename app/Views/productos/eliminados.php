@@ -6,7 +6,7 @@
                        
                         <div>
                             <p>
-                                <a href="<?php echo base_url(); ?>unidades" class="btn btn-warning btn-sm">Regresar</a>
+                                <a href="<?php echo base_url(); ?>productos" class="btn btn-warning btn-sm">Regresar</a>
                             </p>
 
                         </div>
@@ -16,9 +16,12 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
+                                            <th>Codigo</th>
                                             <th>Nombre</th>
-                                            <th>Abreviatura</th>
+                                            <th>Precio</th>
+                                            <th>Existencias</th>
                                             <th></th>
+                                            
                                             
                                        
                                         </tr>
@@ -28,9 +31,11 @@
                                         <?php foreach ($datos as $dato) : ?>
                                             <tr>
                                                 <td><?php echo $dato['id'] ?></td>
+                                                <td><?php echo $dato['codigo'] ?></td>
                                                 <td><?php echo $dato['nombre'] ?></td>
-                                                <td><?php echo $dato['nombre_corto'] ?></td>
-                                                <td><a href="#" data-href="<?php echo base_url(); ?>unidades/reingresar/<?php echo $dato['id'] ?>" data-bs-toggle="modal" data-bs-target="#modal-confirma" data-placement="top" title="Reingresar Registro" class="btn btn-secondary btn-sm"><i class="fa-solid fa-circle-up"></i></a></td>
+                                                <td><?php echo $dato['precio_venta'] ?></td>
+                                                <td><?php echo $dato['existencias'] ?></td>
+                                                <td><a href="#" data-href="<?php echo base_url(); ?>productos/reingresar/<?php echo $dato['id'] ?>" data-bs-toggle="modal" data-bs-target="#modal-confirma" data-placement="top" title="Reingresar Registro" class="btn btn-secondary btn-sm"><i class="fa-solid fa-circle-up"></i></a></td>
                                                 
 
                                             </tr>

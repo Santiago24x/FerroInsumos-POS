@@ -36,7 +36,7 @@ class Productos extends BaseController
 
       $productos = $this->productos->where('activo', $activo)->findAll();
       $data = [
-         'titulo' => 'Productos Eliminadas', 'datos' => $productos   
+         'titulo' => 'Productos Eliminados', 'datos' => $productos   
       ];
 
       echo view('header');
@@ -62,10 +62,16 @@ class Productos extends BaseController
 
    {
 
-      if ($this->request->getMethod() == "POST" && $this->validate([ 'nombre' => 'required', 'nombre_corto' => 'required'])) {
+      if ($this->request->getMethod() == "POST") {
       $this->productos->save([ 
-         'nombre' => $this->request->getPost('nombre'), 
-         'nombre_corto' => $this->request->getPost('nombre_corto')
+         'codigo' => $this->request->getPost('codigo'),
+         'nombre' => $this->request->getPost('nombre'),
+         'precio_venta' => $this->request->getPost('precio_venta'),
+         'precio_compra' => $this->request->getPost('precio_compra'),
+         'stock_minimo' => $this->request->getPost('stock_minimo'),
+         'inventariable' => $this->request->getPost('inventariable'),
+         'id_unidad' => $this->request->getPost('id_unidad'),
+         'id_categoria' => $this->request->getPost('id_categoria')
       ]);
       return redirect()->to(base_url() . 'productos');
 
@@ -83,9 +89,13 @@ class Productos extends BaseController
 
    public function editar($id)
    {
-      $unidad = $this->productos->where('id', $id)->first();
+      $unidades = $this->unidades->where('activo', 1)->findAll();
+      $categorias = $this->categorias->where('activo', 1)->findAll();
+      $producto = $this->productos->where('id', $id)->first();
+    
       $data = [
-         'titulo' => 'Editar Producto', 'datos' => $unidad
+         'titulo' => 'Agregar Producto' , 'unidades' => $unidades, 'categorias' => $categorias
+         , 'producto' => $producto
       ];
       echo view('header');
       echo view('productos/editar', $data);
@@ -96,8 +106,14 @@ class Productos extends BaseController
    public function actualizar()
    {
       $this->productos->update($this->request->getPost('id'), [
-         'nombre' => $this->request->getPost('nombre'), 
-         'nombre_corto' => $this->request->getPost('nombre_corto')
+         'codigo' => $this->request->getPost('codigo'),
+         'nombre' => $this->request->getPost('nombre'),
+         'precio_venta' => $this->request->getPost('precio_venta'),
+         'precio_compra' => $this->request->getPost('precio_compra'),
+         'stock_minimo' => $this->request->getPost('stock_minimo'),
+         'inventariable' => $this->request->getPost('inventariable'),
+         'id_unidad' => $this->request->getPost('id_unidad'),
+         'id_categoria' => $this->request->getPost('id_categoria')
       ]);
       return redirect()->to(base_url() . 'productos');
    }
