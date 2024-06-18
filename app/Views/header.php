@@ -6,7 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <link rel="icon" href="assets/icons8-herramientas-70.png" />
+
+        
+        <link rel="icon" href="<?php echo base_url('/assets/img/Favicons/favicon-256x256.png'); ?>" />
         <title>FERROINSUMOS</title>
         <link href="<?php echo base_url() ?>css/style.min.css" rel="stylesheet" />
         <link href="<?php echo base_url() ?>css/styles.css" rel="stylesheet" />
@@ -16,7 +18,7 @@
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand" href="<?php echo base_url() ?>"><img src="assets/img/logo.png" alt=""></a>
+            <a class="navbar-brand ps-4" href="<?php echo base_url() ?>"><img src="<?php echo base_url('assets/img/logo.png'); ?>" alt="Logo"></a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search

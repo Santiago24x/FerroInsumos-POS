@@ -10,12 +10,33 @@ use App\Models\CategoriasModel;
 class Productos extends BaseController
 {
    protected $productos;
+   protected $reglas;
 
    public function __construct()
    {
       $this->productos = new ProductosModel();
       $this->unidades = new UnidadesModel();
       $this->categorias = new CategoriasModel();
+
+      
+      helper(['form']);
+      $this->reglas = [ 'codigo' => [
+         'rules' => 'required|is_unique[productos.codigo]',
+         'errors' => [ 'required' => 'El codigo es obligatorio', 'is_unique' => 'Ya existe un producto con este Codigo' ]
+
+      ],
+      'nombre' => [
+         'rules' => 'required', 
+         'errors' => [ 'required' => 'El Nombre es obligatorio' ]
+      ], 
+      'id_categoria' => [
+         'rules' => 'required',
+         'errors' => [ 'required' => 'La Categoria es obligatoria' ]
+      ],
+
+      
+      ];
+
    }
 
    public function index($activo = 1)
@@ -62,7 +83,7 @@ class Productos extends BaseController
 
    {
 
-      if ($this->request->getMethod() == "POST") {
+      if ($this->request->getMethod() == "POST" && $this->validate( $this->reglas )) {
       $this->productos->save([ 
          'codigo' => $this->request->getPost('codigo'),
          'nombre' => $this->request->getPost('nombre'),
@@ -76,8 +97,11 @@ class Productos extends BaseController
       return redirect()->to(base_url() . 'productos');
 
    }else{
+
+      $unidades = $this->unidades->where('activo', 1)->findAll();
+      $categorias = $this->categorias->where('activo', 1)->findAll();
       $data = [
-         'titulo' => 'Agregar Producto', 'validation' => $this->validator
+         'titulo' => 'Agregar Producto' , 'unidades' => $unidades, 'categorias' => $categorias, 'validation' => $this->validator
       ];
       echo view('header');
       echo view('productos/nuevo', $data);
