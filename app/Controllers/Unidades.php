@@ -97,9 +97,6 @@ class Unidades extends BaseController
          $data = ['titulo' => 'Editar Unidad', 'datos' => $unidad];
       }
 
-      $data = [
-         'titulo' => 'Editar Unidad', 'datos' => $unidad
-      ];
       echo view('header');
       echo view('unidades/editar', $data);
       echo view('footer');
@@ -139,7 +136,6 @@ class Unidades extends BaseController
       return redirect()->to(base_url() . 'unidades');
    }
    
-
 
 
 
