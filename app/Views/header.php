@@ -61,6 +61,13 @@
                                 </nav>
                             </div>
 
+                            <a class="nav-link" href="<?php echo base_url() ?>clientes">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-users"></i></div>
+                                CLIENTES
+                            </a>
+
+
+
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">

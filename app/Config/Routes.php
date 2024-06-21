@@ -40,3 +40,15 @@ $routes->get('productos/eliminar/(:num)', 'Productos::eliminar/$1');
 $routes->get('productos/reingresar/(:num)', 'Productos::reingresar/$1');
 //$routes->get('productos/actualizar/(:num)', 'Productos::actualizar/$1');
 $routes->post('productos/actualizar', 'Productos::actualizar');
+
+
+// CLIENTES
+$routes->get('clientes', 'Clientes::index');
+$routes->get('clientes/nuevo', 'Clientes::nuevo');
+$routes->post('clientes/insertar', 'Clientes::insertar');
+$routes->get('clientes/eliminados', 'Clientes::eliminados');
+$routes->get('clientes/editar/(:num)', 'Clientes::editar/$1');
+$routes->get('clientes/eliminar/(:num)', 'Clientes::eliminar/$1');
+$routes->get('clientes/reingresar/(:num)', 'Clientes::reingresar/$1');
+//$routes->get('clientes/actualizar/(:num)', 'Clientes::actualizar/$1');
+$routes->post('clientes/actualizar', 'Clientes::actualizar');
