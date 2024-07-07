@@ -65,7 +65,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancelar</button>
-        <a type="button" class="btn btn-danger btn-ok">Si</a>
+        <a type="button" class="btn btn-warning btn-ok">Si</a>
       </div>
     </div>  
   </div>
